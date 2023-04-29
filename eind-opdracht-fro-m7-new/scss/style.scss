@@ -1,1 +1,9 @@
 @use "./base.scss";
+@use "./abstracts/mediaqueries";
+
+
+//COMPONENTS
+@use "./components/header.scss";
+@use "./components/cards.scss";
+@use "./components/display.scss";
+@use "./components/buttons.scss";

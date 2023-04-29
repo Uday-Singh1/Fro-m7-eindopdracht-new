@@ -1,3 +1,5 @@
+//Main Style colors
+
 $yellow: (
    background: #F7FD04,
 );
@@ -17,4 +19,31 @@ $red: (
 
 $gradientOrangeRed: (
     background: linear-gradient(#F9B208, #FC5404),
-)
+);
+
+
+//Extra Colors
+
+$green: (
+   background: #1DB954,
+);
+
+$black: (
+    background: #191414,
+);
+
+$gradient-black-green: (
+    background: linear-gradient( #1DB954 ,#191414),
+);
+
+$gradient-green-black: (
+    background: linear-gradient(#191414, #1DB954),
+);
+
+$gradient-3-black-green: (
+    background: linear-gradient(#191414, #1DB954,#191414 ),
+);
+
+$gradient-3-green-black: (
+    background: linear-gradient(#1DB954, #191414,#1DB954 ),
+);

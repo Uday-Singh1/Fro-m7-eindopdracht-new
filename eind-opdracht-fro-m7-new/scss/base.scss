@@ -4,18 +4,10 @@
 
 body {
     height: 100vh;
-    background: map-get(colors.$gradientOrangeRed, "background");
+    background: map-get(colors.$gradient-3-green-black, "background");
+    overflow: hidden;
 }
 
-.title__collection {
-    display: flex;
-    justify-content: center;
-    padding: 0.3%;
-    height: 2rem;
-    font-size: 1.7rem;
-    position: relative;
-    z-index: 1;
-}
 
 .main {
     position: absolute;
@@ -40,106 +32,25 @@ body {
     width: 50%;
 }
 
-.collection__article {
-  padding: 1rem;
-  
-   
-}
 
-.collection__cards {
-    display: grid;
-    justify-content: center;
-    flex-wrap: wrap;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1rem;
-    align-items: center;
-
-}
-
-
-
-.cards__episodes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: flex-start; /* Add this line */
-}
-  
-.cards__episodes img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    margin-bottom: 10px; /* Add this line */
-}
-  
-.date{
-    display: flex;
-    position: absolute;
-    justify-content: flex-start;
-    padding-left: 12rem;
-    padding-bottom: 13rem;
-}
-  
-.title{
-    display: flex;
-    position: absolute;
-    padding-right: 12rem;
-    padding-top: 11rem;
-}
-
-.date-right{
-    display: flex;
-    justify-content: flex-end;
-    font-size: 3rem;
-}
-.title-right{
-    display: flex;
-    justify-content: flex-start;
-    font-size: 3rem;
-    position: absolute;
-    padding-top: 13rem;
-}
 .right__section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 50%;
-    padding: 20px;
-  }
-  
-  .episode__container {
-    align-self: flex-end; /* align the container to the right side */
- 
-    
-  }
-  
-  .episode__banner {
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    height: 20rem;
-    background: gray;
-    object-fit: contain;
-  }
+    position: relative; /* Add this line */
 
-  .episode__paragraph{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding-top: 3rem;
-    width: 80%;
   }
   
   footer{
      position: fixed;
     bottom: 0;
     left: 0;
-    bottom: 2.5rem;
     width: 100%;
-    height: 50px;
-    font-size: 2.5rem;
+    height: 100%;
+    font-size: 3.5rem;
+    bottom: 2rem;
     text-align: center;
+    @include mixins.ubuntu-font;
   }

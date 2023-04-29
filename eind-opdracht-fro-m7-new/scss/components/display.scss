@@ -1,0 +1,52 @@
+@use "../abstracts/mixins";
+@use "../abstracts/reset";
+@use "../abstracts/colors";
+
+.episode__container {
+    
+    align-self: flex-end; 
+    width: 100%;
+ 
+  }
+  
+  .episode__banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add this line */
+    width: 90%;
+    height: 25rem;
+    background: gray;
+    object-fit: contain;
+    position: relative; /* Add this line */
+    
+  }
+
+
+.date-right{
+  @include mixins.ubuntu-font;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+}
+.title-right{
+  @include mixins.ubuntu-font;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 3rem;
+    
+}
+
+
+  .episode__paragraph{
+    @include mixins.ubuntu-font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding-top: 3rem;
+    width: 80%;
+    overflow: scroll;
+  }
