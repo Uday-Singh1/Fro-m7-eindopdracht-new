@@ -2,25 +2,34 @@
 @use "../components/cards.scss";
 @use "../components/display.scss";
 @use "../components/buttons.scss";
-
+@use "../components/footer.scss";
+@use "../abstracts/animation";
 
 
 @media screen and (max-width: 62.5rem) {
 
-
   body {
     height: 100vh;
+    position: relative;
     //background: map-get(colors.$gradientOrangeRed, "background");
-
+  
 }
 
 .title__collection {
     display: flex;
     justify-content: center;
-    height: 2rem;
-    font-size: 1.3rem;
+    height: 4rem;
+    font-size: 2rem;
     position: relative;
     z-index: 1;
+}
+
+.fa-spotify {
+  font-size: 2.3rem;
+}
+
+.title__collection:hover {
+  color: black; /* Set hover color */
 }
 
 .main {
@@ -29,7 +38,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 98%;
-  height: 110vh;
+  height: 140vh;
   background: white;
   border-radius: 1.7%;
   z-index: 0;
@@ -44,13 +53,15 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100%;
+  height: 105%;
   width: 50%;
+ padding-top: 15rem;
 }
 
   .collection__article {
     display: flex;
     flex-direction: column-reverse;
+    gap: 3rem;
   }
 
   .collection__cards {
@@ -59,23 +70,28 @@
     align-items: center;
     width: 169%;
     height: 0rem;
-
+    
   }
 
   .cards__episodes {
+    transition: filter 0.5s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
-    //position: absolute;
-    
-
+    cursor: pointer; /* add this line */
   }
-
-  .cards__episodes img {
+  
+  .cards__episodes__images{
     width: 100%;
-    height:20rem;
+    height: 20rem;
     object-fit: cover;
+    cursor: pointer;
   }
+  
+  .cards__episodes__images:hover {
+    filter: brightness(100%);
+  }
+
 
   .date {
     position: absolute;
@@ -92,13 +108,14 @@
   .date-right {
     display: flex;
     justify-content: flex-end;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    top: 13%;
   }
 
   .title-right {
     display: flex;
     justify-content: flex-start;
-    font-size: 3rem;
+    font-size: 2.5rem;
   
   }
 
@@ -122,11 +139,22 @@
     overflow: scroll;
   }
 
+  .episode__display{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20rem
+  }
+
   .episode__paragraph {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: 120%;
+    height: 15%;
+    font-size: 1.4rem;
+    overflow: scroll;
+    gap: 2rem;
   }
 
   .source__button{
@@ -135,10 +163,8 @@
     border: none;
     position: absolute;
     left: -47%;
-    top: 40%;
+    top: 55%;
   }
-
-
 
   .audio__tag{
     position: absolute;
@@ -147,15 +173,14 @@
     width: 28rem;
 
   }
-  
+  footer{
+  position: absolute;
+   left: 0;
+   font-size: 1.8rem;
+   text-align: center;
+   bottom: -16rem;
+  }
 }
 
 
-footer{
-  position: fixed;
- bottom: 0;
- left: 0;
- font-size: 2.1rem;
- height: 2.6rem;
- text-align: center;
-}
+

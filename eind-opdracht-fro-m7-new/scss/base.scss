@@ -1,11 +1,13 @@
 @use "./abstracts/mixins";
 @use "./abstracts/reset";
 @use "./abstracts/colors";
+@use "./abstracts/animation";
 
 body {
+    position: relative;
     height: 100vh;
     background: map-get(colors.$gradient-3-green-black, "background");
-    overflow: hidden;
+    //overflow: hidden;
 }
 
 
@@ -20,7 +22,7 @@ body {
     border-radius: 1.7%;
     z-index: 0;
     display: flex;
-
+    animation-name: popup;
 }
 
 .left__section {
@@ -44,13 +46,11 @@ body {
   }
   
   footer{
-     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 3.5rem;
-    bottom: 2rem;
-    text-align: center;
-    @include mixins.ubuntu-font;
-  }
+    position: absolute;
+   bottom: 1rem;
+   left: 0;
+   width: 100%;
+   font-size: 3rem;
+   text-align: center;
+   @include mixins.ubuntu-font;
+ }

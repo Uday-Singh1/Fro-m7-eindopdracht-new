@@ -1,0 +1,45 @@
+.fa-spotify {
+  transition: transform 0.5s ease-in-out;
+}
+
+.fa-spotify:hover {
+  transform: rotate(360deg);
+}
+
+
+
+.cards__episodes__images:hover {
+  filter: brightness(40%);
+}
+
+
+
+
+
+.title__collection {
+  color: black;
+  /* Set default color */
+  transition: color 0.5s ease-in-out;
+}
+
+
+
+.title__collection:hover {
+  color: white;
+  /* Set hover color */
+}
+
+
+
+.episode__display {
+  transition: filter 0.5s ease-in-out;
+}
+
+.episode__display:hover {
+  filter: brightness(40%);
+}
+
+
+a:visited {
+  color: inherit;
+}
